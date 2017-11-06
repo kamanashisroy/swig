@@ -1432,6 +1432,26 @@ csharp_clean:
 	rm -f *.@OBJEXT@ *@CSHARPSO@
 
 ##################################################################
+#####                      CSV                           ######
+##################################################################
+
+# Extra CSharp specific dynamic linking options
+CSV_DLNK  = @CSVDYNAMICLINKING@
+CSV_LIBPREFIX = @CSVLIBRARYPREFIX@
+CSV_OUTPUT = output.csv
+CSV_PODNAME = TODO
+
+# ----------------------------------------------------------------
+# Build CSV output from C/C++ source
+# ----------------------------------------------------------------
+
+csv_cpp: $(SRCDIR_SRCS)
+	$(SWIG) -csv -c++ $(SWIGOPT) -o $(CSV_OUTPUT) $(INTERFACEPATH)
+
+csv_clean:
+	rm -f ${CSV_OUTPUT}
+
+##################################################################
 #####                      LUA                              ######
 ##################################################################
 
