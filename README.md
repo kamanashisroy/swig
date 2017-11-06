@@ -24,7 +24,6 @@ public:
 
 It contains data and functionality. The `data` are `color` and `number`. The `operation` is the functionality.
 
-```
 | member | type |
 | ---    | ---  |
 | color | data |
@@ -61,7 +60,7 @@ Example usage(TODO)
 
 #### Plain Old Data serialization
 
-[Plain Old Data](TODO)(POD) is the data part of the of the class. The CSV output can be used to generate C/C++ code that serialize the POD. [Here](TODO) is an example AWK script that does that.
+[Plain Old Data](https://en.wikipedia.org/wiki/Passive_data_structure)(POD) is the data part of the of the class. The CSV output can be used to generate C/C++ code that serialize the POD. [Here](TODO) is an example AWK script that does that.
 
 [Here] is an example AWK script that converts POD to JSON data.
 
